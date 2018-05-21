@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>ALEX MEZA</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge />">
+	<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="Alex Meza" />
+	<meta name="keywords" content="HTML, CSS, JavaScript, jQuery, jQueryUI, Bootstrap" />
+	<meta name="prototype" content="0" />
+	<meta name="date" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="slick/slick.css"/>
+	<link rel="stylesheet" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/loaders.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+</head>
+<body>
+	<!-- wrapper start -->
+	<div id="app-background">
+		<canvas class="canvasBackground">
+		</canvas>
+	</div>
+	<canvas id="granim"></canvas>
+
+	<!-- Header -->
+	<div class="header container">
+		<div class="title-wrapper">
+			<img src="assets/images/alex-meza-logo-white.png" />
+			<h1 class="alex-meza">ALEX MEZA</h1>
+			<h3 class="subheader">Web Developer</h3>
+			<div class="social">
+				<a href="https://github.com/mezawebdev"><i class="ion-social-github"></i></a>
+				<a href="https://instagram.com/mezawebdev"><i class="ion-social-instagram"></i></a>
+				<a href="https://codepen.io/mezawebdev/"><i class="ion-social-codepen"></i></a>
+				<a href="https://www.linkedin.com/in/alex-meza-6419b4117/"><i class="ion-social-linkedin"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="header-background black">
+	</div>
+	<!-- Navigation -->
+	<div class="nav-wrapper container">
+		<div class="navigation">
+			<ul>
+				<li><a href="#" id="home-btn" class="active">HOME</a></li>
+				<li><a href="#" id="portfolio-btn">PORTFOLIO</a></li>
+				<li><a href="#" id="about-btn">ABOUT</a></li>
+				<li><a href="#" id="reviews-btn">CONTACT</a></li>
+				<li><a href="#" id="contact-btn">BLOG</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="app">
+		<div id="home" class="app-screen app-center home-wrapper">
+			<div class="content">
+				
+			</div>
+			<div class="footer">
+				<div class="column-0">
+					<p>Efficiency.</p>
+				</div>
+				<div class="column-1">
+					<p>Simplicity.</p>
+				</div>
+				<div class="column-2">
+					<p>Elegance.</p>
+				</div>
+			</div>
+		</div>
+		<div id="portfolio" class="app-screen app-top portfolio-wrapper container">
+			<div class="content">
+				<h2>PORTFOLIO</h2>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-xs-12">
+						<h3>Web Applications</h3>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<!--
+				<div class="row">
+					<div class="col-xs-12">
+						<a class="filter" href="#">Filter <span class="glyphicon glyphicon-chevron-down"></span></a>
+					</div>
+				</div>
+				-->
+				<br />
+				<div class="filters-wrapper row">
+					<div class="col-md-6 col-md-offset-3 filters-list">
+						<div class="row">
+							<div class="col-xs-3 active tech-0">
+								<p>HTML5&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-1">
+								<p>CSS3&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-2">
+								<p>JavaScript&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-3">
+								<p>jQuery&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-3 active tech-4">
+								<p>Boostrap&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-5">
+								<p>Sass&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-6">
+								<p>Wordpress&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-7">
+								<p>Git/Github&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-3 hidable">
+							</div>
+							<div class="col-xs-3 active tech-8">
+								<p>PHP&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 active tech-9">
+								<p>MySQL&nbsp;<i class="ion-close-circled"></i></p>
+							</div>
+							<div class="col-xs-3 hidable">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="loader">
+					<div class="ball-spin-fade-loader">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+
+				<div class="web-applications-wrapper">
+					
+					<div class="row">
+						<div class="col-sm-4">
+							<div id="0" class="project" onclick="toggleWindow(0)">
+								<img src="assets/images/portfolio/project-1-envision-solar.png" />
+								<div class="overlay-name">
+									<h5>Envision Solar</h5>
+								</div>
+							</div>
+						</div>
+						<div class="gap hideable"></div>
+						<div class="col-sm-4">
+							<div id="1" class="project" onclick="toggleWindow(1)">
+								<img src="assets/images/portfolio/project-2-sd-home-finder.png" />
+								<div class="overlay-name">
+									<h5>SD Home Finder</h5>
+								</div>
+							</div>
+						</div>
+						<div class="gap hideable"></div>
+						<div class="col-sm-4">
+							<div class="project" onclick="toggleWindow(2)">
+								<img src="assets/images/portfolio/project-3-zen-vegan.png" />
+								<div class="overlay-name">
+									<h5>Zen Vegan</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gap"></div>
+
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="project" onclick="toggleWindow(3)">
+								<img src="assets/images/portfolio/3/portfolio-picture.png" />
+								<div class="overlay-name">
+									<h5>Adam Flores Design</h5>
+								</div>
+							</div>
+						</div>
+						<div class="gap hideable"></div>
+						<div class="col-sm-4">
+							<div class="project" onclick="toggleWindow(4)">
+								<img src="assets/images/portfolio/4/portfolio.png" />
+								<div class="overlay-name">
+									<h5>Sacred Geometry System</h5>
+								</div>
+							</div>
+						</div>
+						<div class="gap hideable"></div>
+						<div class="col-sm-4">
+							<!--<div class="project" onclick="toggleWindow(5)">
+								<img src="assets/images/portfolio/project-mockup-blank.png" />
+								<div class="overlay-name">
+									<h5>Adam Flores Design</h5>
+								</div>
+							</div>-->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="about" class="app-screen app-right about-wrapper container">
+			<div class="content">
+				<h2>ABOUT</h2>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-lg-12">
+						<img class="profile-image" src="assets/images/profile-1.JPG" />
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<p class="profile-about">My name is Alex Meza, I am a front-end web developer from San Diego, California. I love creating user-friendly web applications and interfaces that bring long-lasting emotional connections with their users. 
+						<br />When I'm away from the keyboard, I am playing <a href="instagram.com/alexmezx">drums</a>.</p>
+						<img class="signature" src="assets/images/signature-white.png" />
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Brands I've Worked For</h3>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="brands-carousel">
+							<div><img src="assets/images/envision-solar-logo.png" /></div>
+							<div><img src="assets/images/adam-flores-logo-big.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Tools I Use</h3>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row tools-wrapper">
+					<div class="col-xs-6">
+						<div class="float-right">
+							<img src="assets/images/html5-white.png" />
+							<h5>HTML5</h5>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="float-left">
+							<img src="assets/images/css3-white.png" />
+							<h5>CSS3</h5>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row tools-wrapper">
+					<div class="col-xs-6">
+						<div class="float-right">
+							<img src="assets/images/js-white.png" />
+							<h5>JavaScript</h5>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="float-left">
+							<img src="assets/images/jquery-white.png" />
+							<h5>jQuery</h5>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row tools-wrapper">
+					<div class="col-xs-6">
+						<div class="float-right">
+							<img src="assets/images/bootstrap.png" />
+							<h5>Bootstrap</h5>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="float-left">
+							<img src="assets/images/sass.png" />
+							<h5>Sass</h5>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row tools-wrapper">
+					<div class="col-xs-6">
+						<div class="float-right">
+							<img src="assets/images/wordpress.png" />
+							<h5>Wordpress</h5>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="float-left">
+							<img src="assets/images/git.png" />
+							<h5>Git/GitHub</h5>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row tools-wrapper">
+					<div class="col-xs-6">
+						<div class="float-right">
+							<img src="assets/images/php.png" />
+							<h5>PHP</h5>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="float-left">
+							<img src="assets/images/mysql.png" />
+							<h5>MySQL</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact" class="app-screen app-bottom contact-wrapper container">
+			<div class="content">
+				<h2>CONTACT</h2>
+				<div class="gap"></div>
+				<div class="row row-0">
+					<div class="col-lg-12">
+						<h3>Let's grow together.</h3>
+					</div>
+				</div>
+				<div class="gap toggleable"></div>
+				<div class="row row-1">
+					<div class="col-sm-6 column-0">
+						<img class="contact-image" src="assets/images/profile-2.JPG" />
+					</div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-6 column-1">
+						<form>
+							<input type="name" class="input" placeholder="Name" />
+							<input type="email" class="input" placeholder="E-mail" />
+							<textarea type="name" class="textarea" placeholder="Message"></textarea>
+							<input type="submit" class="submit" value="Send" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="blog" class="app-screen app-left blog-wrapper container">
+			<div class="content">
+				<h2>BLOG</h2>
+				<div class="gap"></div>
+				<h3>Coming Soon.</h3>
+			</div>
+		</div>
+	</div>
+
+	<div id="iWindow">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<button class="exit">
+						<span class="cross-0"></span>
+						<span class="cross-1"></span>
+					</button>
+				</div>
+			</div>
+
+			<div class="project-0 project-wrapper">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<div class="project-gallery-wrapper">
+							<div><img src="assets/images/portfolio/Mockup-1-Envision-Solar.png" /></div>
+							<div><img src="assets/images/portfolio/Mockup-2-Envision-Solar.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Envision Solar</h2>
+						<div class="cool-hr"></div>
+						<p>Modern website design and development for San Diego's top leading solar contractor, Envision Solar. This future-proof website was created with versatility and efficiency in mind. Drawing from a fresh orange-blue color palette and a sleek custom design, the site ensures that Envision Solar claims the title as the number one solution for solar products. The website is being built in Wordpress with the X-Theme.</p>
+						<div class="project-status">
+							<p><div class="inprogress current-status"><i class="ion-android-settings"></i></div>&nbsp;IN PROGRESS&nbsp;&nbsp;-&nbsp;&nbsp;<button class="incomplete" onclick="goToApp(0);">GO TO APP</button></p>
+						</div>
+					</div>
+					<div class="gap hideable"></div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-4 tools-list">
+						<h2>Tools Used</h2>
+						<div class="cool-hr"></div>
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/html5-white.png" />
+								<h5>HTML5</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/css3-white.png" />
+								<h5>CSS3</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/js-white.png" />
+								<h5>JavaScript</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/wordpress.png" />
+								<h5>Wordpress</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/php.png" />
+								<h5>PHP7</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/mysql.png" />
+								<h5>MySQL</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<p class="other-tools">Other Tools Used: X-Theme, Cornerstone plugin, Fontawesome icons, Photoshop for mockups and templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-1 project-wrapper">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<div class="project-gallery-wrapper">
+							<div><img src="assets/images/portfolio/Mockup-1-SD-Home-Finder.png" /></div>
+							<div><img src="assets/images/portfolio/Mockup-2-SD-Home-Finder.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>SD Home Finder</h2>
+						<div class="cool-hr"></div>
+						<p>Find your dream San Diego home with SD Home Finder. This Web Applications is designed as a modernized search tool to find listings for homes within the San Diego county. It consists of 2 main pages, the home page, and the actual home finder application with the map. This app has been built as a tribute to HomeFinder.com. SD Home Finder was fully designed, developed, and coded by Alex Meza. Lots of JavaScript in this one.</p>
+						<div class="project-status">
+							<p><div class="inprogress current-status"><i class="ion-android-settings"></i></div>&nbsp;IN PROGRESS&nbsp;&nbsp;-&nbsp;&nbsp;<button class="incomplete" onclick="goToApp(1);">GO TO APP</button></p>
+						</div>
+					</div>
+					<div class="gap hideable"></div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-4 tools-list">
+						<h2>Tools Used</h2>
+						<div class="cool-hr"></div>
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/html5-white.png" />
+								<h5>HTML5</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/css3-white.png" />
+								<h5>CSS3</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/js-white.png" />
+								<h5>JavaScript</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/jquery-white.png" />
+								<h5>jQuery</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/ajax.png" />
+								<h5>AJAX</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/json.png" />
+								<h5>JSON</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3">
+								<img src="assets/images/bootstrap.png" />
+								<h5>Bootstrap</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<p class="other-tools">Other Tools Used: Bootstrap Glyhicons, Fontawesome icons, Photoshop for mockups and templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-2 project-wrapper">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<div class="project-gallery-wrapper">
+							<div><img src="assets/images/portfolio/Mockup-1-Zen-Vegan.png" /></div>
+							<div><img src="assets/images/portfolio/Mockup-2-Zen-Vegan.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Zen Vegan</h2>
+						<div class="cool-hr"></div>
+						<p>Come dine in at your favorite vegan restaurant and enjoy fine asian cuisine. This site was built with an eastern-style design in mind, taking from Zen philosophy and other eastern doctrines which emphasize simplicity. The app was built in its entirety with JavaScript. Built all the way from scratch. Designed with Sketch.</p>
+						<div class="project-status">
+							<p><div class="complete current-status"><i class="ion-android-settings"></i></div>&nbsp;COMPLETE&nbsp;&nbsp;-&nbsp;&nbsp;<button class="complete" onclick="goToApp(2);">GO TO APP</button></p>
+						</div>
+					</div>
+					<div class="gap hideable"></div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-4 tools-list">
+						<h2>Tools Used</h2>
+						<div class="cool-hr"></div>
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/html5-white.png" />
+								<h5>HTML5</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/css3-white.png" />
+								<h5>CSS3</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/js-white.png" />
+								<h5>JavaScript</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/jquery-white.png" />
+								<h5>jQuery</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/ajax.png" />
+								<h5>AJAX</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/json.png" />
+								<h5>JSON</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3">
+								<img src="assets/images/bootstrap.png" />
+								<h5>Bootstrap</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<p class="other-tools">Other Tools Used: Ionicons Icons, smooth-scroll.js, date.js, perfect-scrollbar.js, Photoshop for mockups and templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-3 project-wrapper">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<div class="project-gallery-wrapper">
+							<div><img src="assets/images/portfolio/3/mockup-0.png" /></div>
+							<div><img src="assets/images/portfolio/3/mockup-1.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Adam Flores Design</h2>
+						<div class="cool-hr"></div>
+						<p>Simple, clean and beautiful design for professional graphic designer Adam Flores. Adam and I worked closely to create a gorgeous website that fully represents his brand, status and rapport in the design industry. This website was built on Wordpress. Lots of custom code.</p>
+						<div class="project-status">
+							<p><div class="current-status"><i class="ion-md-checkmark"></i></div>&nbsp;COMPLETE&nbsp;&nbsp;-&nbsp;&nbsp;<button class="complete" onclick="goToApp(3);">GO TO WEBSITE</button></p>
+						</div>
+					</div>
+					<div class="gap hideable"></div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-4 tools-list">
+						<h2>Tools Used</h2>
+						<div class="cool-hr"></div>
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/html5-white.png" />
+								<h5>HTML5</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/css3-white.png" />
+								<h5>CSS3</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/js-white.png" />
+								<h5>JavaScript</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/jquery-white.png" />
+								<h5>jQuery</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/wordpress.png" />
+								<h5>Wordpress</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/php.png" />
+								<h5>PHP</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3">
+								<img src="assets/images/bootstrap.png" />
+								<h5>Bootstrap</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<p class="other-tools">Other Tools Used: Font-awesome Icons, Photoshop for mockups and templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-4 project-wrapper">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<div class="project-gallery-wrapper">
+							<div><img src="assets/images/portfolio/4/mockup-0.png" /></div>
+							<div><img src="assets/images/portfolio/4/mockup-1.png" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-8">
+						<h2>Sacred Geometry System</h2>
+						<div class="cool-hr"></div>
+						<p>A state-of-the-art application for creating and customizing your own unique sacred geometry based on the eastern philosophy. Create unique shapes to display for backgrounds, projects, visual effects, etc. Share instantly with anyone. Entirely built on JavaScript. Graphics and animations all created with the HTML5 Canvas.</p>
+						<div class="project-status">
+							<p><div class="inprogress current-status"><i class="ion-android-settings"></i></div>&nbsp;IN PROGRESS&nbsp;&nbsp;-&nbsp;&nbsp;<button class="incomplete" onclick="goToApp(4);">GO TO APP</button></p>
+						</div>
+					</div>
+					<div class="gap hideable"></div>
+					<div class="gap hideable"></div>
+					<div class="col-sm-4 tools-list">
+						<h2>Tools Used</h2>
+						<div class="cool-hr"></div>
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/html5-white.png" />
+								<h5>HTML5</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/css3-white.png" />
+								<h5>CSS3</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/js-white.png" />
+								<h5>JavaScript</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-4">
+								<img src="assets/images/jquery-white.png" />
+								<h5>jQuery</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/ajax.png" />
+								<h5>AJAX</h5>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/json.png" />
+								<h5>JSON</h5>
+							</div>
+						</div>
+						<br /><br />
+						<div class="row">
+							<div class="col-xs-6 col-xs-offset-3">
+								<img src="assets/images/bootstrap.png" />
+								<h5>Bootstrap</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gap"></div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="content">
+							<p class="other-tools">Other Tools Used: Font-awesome icons, HTML5 Canvas, granim.js, perfect-scrollbar.js, Photoshop for mockup and templates.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Templates -->
+	<script type="layout/template" class="project-template">
+		<div class="project" onclick="toggleWindow(this.getAttribute('id'))">
+			<img src="assets/images/portfolio/project-mockup-blank.png" />
+			<div class="overlay-name">
+				<h5>Blank Project</h5>
+			</div>
+		</div>
+	</script>
+
+	<!-- wrapper ends -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- <script src="assets/js/jquery-ui.min.js"></script> -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/flexBackground.js"></script>
+	<script src="assets/js/perfect-scrollbar.min.js"></script>
+	<script src="assets/js/granim.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+[{
+	"id": 0,
+	"name": "Envision Solar",
+	"type": "contract",
+	"tech": [
+		"html5",
+		"css3",
+		"javascript",
+		"wordpress",
+		"php",
+		"mysql",
+		"x-theme",
+		"photoshop",
+		"font-awesome"
+	],
+	"images": "assets/images/Portfolio"
+},
+{	"id": 1,
+	"name": "HomeApp",
+	"type": "personal",
+	"tech": [
+		"html5",
+		"css3",
+		"sass",
+		"javascript",
+		"jquery",
+		"json",
+		"ajax",
+		"php",
+		"noUiSlider",
+		"perfect slider",
+		"google maps api",
+		"photoshop",
+		"git",
+		"bootstrap"
+	],
+	"images": "assets/images/Portfolio"
+},
+{
+	"id": 2,
+	"name": "Adam Flores Design",
+	"type": "freelance",
+	"tech": [
+		"html5",
+		"css3",
+		"javascript",
+		"wordpress",
+		"php",
+		"mysql",
+		"x-theme",
+		"photoshop",
+		"bootstrap"
+	],
+	"images": "assets/images/Portfolio"
+},
+{
+	"id": 3,
+	"name": "Natalie Mosqueda Photography",
+	"type": "freelance",
+	"tech": [
+		"html5",
+		"css3",
+		"javascript",
+		"wordpress",
+		"php",
+		"mysql",
+		"x-theme",
+		"photoshop"
+	],
+	"images": "assets/images/Portfolio"
+}]

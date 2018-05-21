@@ -1,0 +1,1069 @@
+//--------------
+//	Imports
+//--------------
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_globals.scss";
+@import "_mixins.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+//--------------
+//	Variables
+//--------------
+$blue: #3F8782;
+$main-font-color-white: rgb(250, 250, 250);
+$main-padding: 25px;
+$nav-font-size-mobile: 0.7em;
+$nav-font-color: rgb(250, 250, 250);
+$transitionDurationMobile: 1.2s;
+$gapSizeMobile: 35px;
+$gapSizeTablet: 50px;
+$gapSizeDesktop: 60px;
+$pSizeMobile: 0.9em;
+$fontBoxShadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+$mainBorderRadius: 4px;
+$mainBoxShadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+$mainDropShadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+
+// Main Palette
+$primary-color: rgb(255, 83, 73);
+$secondary-color: #30B321;
+
+
+@mixin fontFormat {
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+//--------------
+//	Global
+//--------------
+body, html {
+	background: rgb(35, 35, 35);
+}
+
+p {
+	line-height: 24px;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+html {overflow: -moz-scrollbars-none;}
+
+.ps__rail-x, .ps__rail-y {
+	display: none;
+}
+
+//--------------
+//	Utilities
+//--------------
+.gap {
+	width: 100%;
+	height: $gapSizeMobile;
+	transition: height $transitionDurationMobile ease-in-out;
+	-moz-transition: height $transitionDurationMobile ease-in-out;
+	-webkit-transition: height $transitionDurationMobile ease-in-out;
+	-o-transition: height $transitionDurationMobile ease-in-out;
+}
+
+.cool-hr {
+	width: 100px;
+	height: 2px;
+	border-radius: 2px;
+	background: rgb(250, 250, 250);
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+
+//---------------------------------
+//	Small Devices 0px --> 480px
+//---------------------------------
+//--------------
+//	Header
+//--------------
+.header {
+	.title-wrapper {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		margin-top: -20px;
+		z-index: 11;
+		transition: top $transitionDurationMobile ease-in-out;
+		text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+		img {
+			width: 60px;
+			transition: width $transitionDurationMobile ease-in-out;
+			filter: drop-shadow(0px 4px 6px rgba(255, 83, 73, 0.8));
+			animation-name: colorMorpher;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			//animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+		h1 {
+			font-size: 3em;
+			color: rgb(250, 250, 250);
+			font-weight: 100;
+			letter-spacing: 3px;
+			transition: font-size $transitionDurationMobile ease-in-out;
+			white-space: nowrap;
+		}
+		h3 {
+			color: rgb(250, 250, 250);
+			font-weight: 100;
+			letter-spacing: 2px;
+			margin-top: 5px;
+			font-size: 1.1em;
+			transition: opacity $transitionDurationMobile ease-in-out;
+		}
+		h3.closed {
+			opacity: 0;
+		}
+		.social {
+			margin-top: 12px;
+			margin-left: auto;
+			margin-right: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			a {
+				margin-left: 10px;
+				padding: 5px;
+				padding-top: 10px;
+			}
+			i {
+				color: rgb(250, 250, 250);
+				font-weight: 100;
+				letter-spacing: 2px;
+				//margin-top: 5px;
+				font-size: 1.6em;
+			}
+			transition: opacity $transitionDurationMobile ease-in-out;
+		}
+		.social.closed {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	.title-wrapper.secondary {
+		top: 80px;
+		h1 {
+			font-size: 1.4em;
+		}
+		img {
+			width: 30px;
+		}
+		/*
+		h1 {
+			display: inline-block;
+			font-size: 1.5em;
+			//margin-top: -20px;
+			position: relative;
+			top: -16px;
+		}
+		img {
+			display: inline-block;
+			width: 45px;
+			margin-right: 7px;
+		}*/
+	}
+}
+
+.alex-meza {
+	opacity: 0;
+}
+
+.header-background {
+	width: 100%;
+	height: 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	transition: height $transitionDurationMobile ease-in-out;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.header-background.active {
+	height: 145px;
+}
+
+.header-background.black {
+	//background: rgba(40, 40, 40, 0.9);
+	background: linear-gradient(115deg, rgba(40, 40, 40, 0.88) 50%, rgba(55, 55, 55, 0.88) 75%, rgba(40, 40, 40, 0.88) 95%);
+	//box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	//box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-background.white {
+	background: rgb(250, 250, 250);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3)
+}
+
+//--------------
+//	Navigation
+//--------------
+.nav-wrapper {
+	position: fixed;
+	top: $main-padding;
+	width: 100%;
+	font-weight: 100;
+	letter-spacing: 2px;
+	z-index: 10;
+	transition: top $transitionDurationMobile ease-in-out;
+	.nav-mobile-button {
+		right: $main-padding;
+		position: fixed;
+		color: rgb(250, 250, 250);
+		font-size: 1.3em;
+	}
+	.navigation {
+		width: 100%;
+		font-size: $nav-font-size-mobile;
+		transition: font-size $transitionDurationMobile ease-in-out;
+		//background: red;
+		padding-top: 20px;
+		overflow: hidden;
+		white-space: nowrap;
+		ul {
+			text-align: center;
+			white-space: nowrap;
+			li {
+				display: inline-block;
+				white-space: nowrap;
+				a {
+					color: $nav-font-color;
+					white-space: nowrap;
+					text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+					font-weight: 200;
+					padding-top: 10px;
+					transition: color 0.25s ease-in-out;
+				}
+				a.active {
+					color: $primary-color;
+					text-decoration: none;
+					font-weight: 400;
+				}
+				a:hover {
+					color: $primary-color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.nav-wrapper.secondary {
+	top: 80px;
+}
+
+
+//--------------
+//	    App
+//--------------
+// Disable Scroll Bars. Needs Firefox Fix.
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#app {
+	color: $main-font-color-white;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	//background: blue;
+	//overflow: hidden;
+	z-index: 0;
+	transition: transform $transitionDurationMobile ease-in-out;
+	.app-screen {
+		//margin-top: 200px;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		padding-bottom: 150px;
+		.content {
+			padding-top: 230px;
+			transition: padding-top $transitionDurationMobile ease-in-out;
+			-moz-transition: padding-top $transitionDurationMobile ease-in-out;
+			-o-transition: padding-top $transitionDurationMobile ease-in-out;
+			-webkit-transition: padding-top $transitionDurationMobile ease-in-out;
+			h2 {
+				text-align: center;
+				font-size: 1.5em;
+				font-weight: 100;
+				letter-spacing: 2px;
+				margin-bottom: 25px;
+				transition: font-size $transitionDurationMobile ease-in-out;
+				-moz-transition: font-size $transitionDurationMobile ease-in-out;
+				-webkit-transition: font-size $transitionDurationMobile ease-in-out;
+				-o-transition: font-size $transitionDurationMobile ease-in-out;
+			}
+			h3 {
+				font-size: 1.3em;
+				color: $main-font-color-white;
+				font-weight: 100;
+				letter-spacing: 2px;
+				text-align: center;
+				font-style: italic;
+				text-shadow: $fontBoxShadow;
+				transition: font-size $transitionDurationMobile ease-in-out;
+				-moz-transition: font-size $transitionDurationMobile ease-in-out;
+				-o-transition: font-size $transitionDurationMobile ease-in-out;
+				-webkit-transition: font-size $transitionDurationMobile ease-in-out;
+			}
+			.row {
+
+			}
+		}
+	}
+	.app-center {
+
+	}
+	.app-top {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: -100vh;
+		//background: red;
+	}
+	.app-right {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 100vw;
+		//background: green;
+		top: 0;
+	}
+	.app-bottom {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		//background: white;
+		top: 100vh;
+	}
+	.app-left {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		//background: pink;
+		left: -100vw;
+		top: 0;
+	}
+
+	//---------- Home Page ------------
+	.app-screen.home-wrapper {
+		.footer {
+			position: absolute;
+			//bottom: 25px;
+			bottom: 10px;
+			width: 100vw;
+			white-space: nowrap;
+			.column-0, .column-1, .column-2 {
+				width: 33.33%;
+				display: inline-block;
+				white-space: nowrap;
+				//background: red;
+				text-align: center;
+				padding-bottom: 15px;
+				color: rgba(250, 250, 250, 0.4);
+				font-weight: 100px;
+				font-size: 0.8em;
+				font-style: italic;
+			}
+
+		}
+	}
+
+	//---------- About Page ------------
+	.app-screen.about-wrapper {
+		// Brands Slider 
+		img.profile-image {
+			width: 270px;
+			display: block;
+			margin: 0 auto;
+			border: 1px solid rgb(250, 250, 250);
+			border-radius: $mainBorderRadius;
+			box-shadow: $mainBoxShadow;
+		}
+
+		img.signature {
+			width: 150px;
+			margin: 0 auto;
+			display: block;
+			margin-top: 15px;
+		}
+
+		p.profile-about {
+			text-align: center;
+			font-weight: 200;
+			color: $main-font-color-white;
+			letter-spacing: 1px;
+			font-size: $pSizeMobile;
+
+			a {
+				color: $main-font-color-white;
+				font-style: italic;
+			}
+		}
+
+
+		.brands-carousel {
+			div {
+				img {
+					width: 230px;
+					margin: 0 auto;
+					display: block;
+					filter: drop-shadow($mainBoxShadow);
+					-moz-filter: drop-shadow($mainBoxShadow);
+					-o-filter: drop-shadow($mainBoxShadow);
+					-webkit-filter: drop-shadow($mainBoxShadow);
+				}
+			}
+		}
+
+		.tools-wrapper {
+			text-align: center;
+			img {
+				height: 100px;
+				margin: 0 auto;
+				display: block;
+				filter: drop-shadow($mainDropShadow);
+				-moz-filter: drop-shadow($mainDropShadow);
+				-webkit-filter: drop-shadow($mainDropShadow);
+				-o-filter: drop-shadow($mainDropShadow);
+				transition: transform 0.25s ease-in-out, height $transitionDurationMobile ease-in-out;
+				-moz-transition: transform 0.25s ease-in-out, height $transitionDurationMobile ease-in-out;
+				-webkit-transition: transform 0.25s ease-in-out, height $transitionDurationMobile ease-in-out;
+				-o-transition: transform 0.25s ease-in-out, height $transitionDurationMobile ease-in-out;
+			}
+
+			img:hover {
+				transform: scale(1.05);
+				-moz-transform: scale(1.05);
+				-o-transform: scale(1.05);
+				-webkit-transform: scale(1.05);
+			}
+
+			img:active {
+				transform: scale(0.95);
+				-moz-transform: scale(0.95);
+				-o-transform: scale(0.95);
+				-webkit-transform: scale(0.95);
+			}
+
+			h5 {
+				color: $main-font-color-white;
+				font-weight: 200;
+				letter-spacing: 2px;
+				margin-top: 10px;
+				text-shadow: $mainBoxShadow;
+			}
+		}
+	}
+
+	//---------- Contact Page ------------
+	.app-screen.contact-wrapper {
+		.row-1 {
+			.column-0 {
+				img {
+					width: 250px;
+					border: 1px solid rgb(250, 250, 250);
+					margin: 0 auto;
+					display: block;
+					border-radius: $mainBorderRadius;
+					box-shadow: $mainBoxShadow;
+				}
+			}
+			.column-1 {
+				form {
+					input.input, textarea {
+						display: block;
+						width: 250px;
+						margin: 0 auto;
+						margin-bottom: 35px;
+						background: rgba(0, 0, 0, 0.4);
+						border: 1px solid rgb(250, 250, 250);
+						padding: 10px;
+						color: rgb(250, 250, 250);
+						font-weight: 200;
+						letter-spacing: 1px;
+						border-radius: $mainBorderRadius;
+						box-shadow: $mainBoxShadow;
+					}
+					textarea {
+						height: 100px;
+					}
+					input.submit {
+						display: block;
+						margin: 0 auto;
+						width: 200px;
+						padding: 10px;
+						color: rgb(250, 250, 250);
+						border-radius: $mainBorderRadius;
+						box-shadow: $mainBoxShadow;
+						background: $primary-color;
+						border: none;
+						font-weight:  bold;
+						letter-spacing: 1px;
+					}
+				} 
+			}
+		}
+	}
+
+	//---------- Portfolio Page ------------
+	.app-screen.portfolio-wrapper {
+		text-align: center;
+
+		a.filter {
+			color: rgba(255, 255, 255, 0.5);
+			font-weight: 200;
+			letter-spacing: 2px;
+			text-decoration: none;
+			span {
+				top: 3px;
+				position: relative;
+			}
+		}
+
+		.filters-wrapper {
+			////transform: scaleY(0);
+			transition: transform 0.25s ease-in-out, height 0.25s ease-in-out;
+			height: 0px;
+			overflow-y: hidden;
+			.col-xs-3 {
+				height: 50px;
+				background: rgba(35, 35, 35, 0.7);
+				border: 1px solid rgb(250, 250, 250);
+				cursor: pointer;
+				transition: background 0.25s ease-in-out;
+				-moz-transition: background 0.25s ease-in-out;
+				-o-transition: background 0.25s ease-in-out;
+				-webkit-transition: background 0.25s ease-in-out;
+
+				p {
+					font-size: 0.6em;
+					padding-top: 13px;
+					color: rgba(255, 255, 255, 0.5);
+					white-space: nowrap;
+					i {
+						display: none;
+					}
+				}
+			}
+			.col-xs-3.active {
+				background: $primary-color;
+				p {
+					color: rgb(250, 250, 250);
+					i {
+						display: inline;
+					}
+				}
+			}
+			.col-xs-3.hidable {
+				background: transparent !important;
+				border: none !important;
+				pointer-events: none;
+			}
+			/*
+			.col-xs-3:hover {
+				background: $primary-color;
+			}*/
+		}
+
+		.filters-wrapper.active {
+			//transform: none;
+			height: 175px;
+		}
+
+		.loader {
+			top: 60px;
+		    position: relative;
+		    transform: translate(49%, 0);
+		    -moz-transform: translate(49%, 0);
+		    -o-transform: translate(49%, 0);
+		    -webkit-transform: translate(49%, 0);
+		    display: none;
+		}
+
+		.loader.active {
+			display: block;
+		}
+
+		.col-sm-4.margin-bottom {
+			margin-bottom: 25px;
+		}
+
+		.project {
+			width: 95%;
+			transition: transform 0.25s ease-in-out;
+			cursor: pointer;
+			margin: 0 auto;
+
+			img {
+				width: 100%;
+				border-radius: $mainBorderRadius;
+				box-shadow: $mainBoxShadow;
+				z-index: 5;
+				position: relative;
+			}
+
+			.overlay-name {
+				width: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-top: -37px;
+				z-index: 10;
+				position: relative;
+				border-bottom-left-radius: $mainBorderRadius;
+				border-bottom-right-radius: $mainBorderRadius;
+				h5 {
+					color: $main-font-color-white;
+					font-weight: 200;
+					letter-spacing: 2px;
+					//margin-top: 10px;
+					text-shadow: $mainBoxShadow;
+				}
+			}
+		}
+
+		.project:hover {
+			transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+		}
+
+		.project:active {
+			transform: scale(0.95);
+			-webkit-transform: scale(0.95);
+			-moz-transform: scale(0.95);
+			-o-transform: scale(0.95);
+		}
+	}
+
+	//---------- Blog Page ------------
+	.app-screen.blog-wrapper {
+	}
+}
+
+#app.portfolio {
+	transform: translate(0, 100%);
+	-moz-transform: translate(0, 100%);
+	-o-transform: translate(0, 100%);
+	-webkit-transform: translate(0, 100%);
+}
+
+#app.about {
+	transform: translate(-100%, 0);
+	-moz-transform: translate(-100%, 0);
+	-o-transform: translate(-100%, 0);
+	-webkit-transform: translate(-100%, 0);
+}
+
+#app.reviews {
+	transform: translate(0, -100%);
+	-moz-transform: translate(0, -100%);
+	-o-transform: translate(0, -100%);
+	-webkit-transform: translate(0, -100%);
+}
+
+#app.contact {
+	transform: translate(100%, 0);
+	-moz-transform: translate(100%, 0);
+	-o-transform: translate(100%, 0);
+	-webkit-transform: translate(100%, 0);
+}
+
+#app-background {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	canvas {
+		position: relative;
+	}
+}
+
+#granim {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+}
+
+#iWindow {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	background: rgba(35, 35, 35, 1);
+	opacity: 0;
+	pointer-events: none;
+	overflow-y: scroll;
+	padding-bottom: 100px;
+	transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+	-o-transition: opacity 0.25s ease-in-out;
+	button.exit {
+		margin-top: 20px;
+		padding: 30px;
+		border-radius: 30px;
+		border: 1px solid rgb(255, 255, 255);
+		background: transparent;
+		transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+		-webkit-transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+		-moz-transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+		-o-transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+		left: 25px;
+		position: absolute;
+	}
+	button.exit:hover {
+		background: $primary-color;
+		transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-o-transform: scale(1.05);
+	}
+	button.exit:active {
+		transform: scale(0.95);
+		-webkit-transform: scale(0.95);
+		-moz-transform: scale(0.95);
+		-o-transform: scale(0.95);
+	}
+	span.cross-0 {
+		position: absolute;
+		left: 13px;
+		top: 30px;
+		width: 35px;
+		height: 1px;
+		background: rgb(255, 255, 255);
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+	span.cross-1 {
+		position: absolute;
+		left: 13px;
+		top: 30px;
+		width: 35px;
+		height: 1px;
+		background: rgb(255, 255, 255);
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	.project-gallery-wrapper {
+		padding-left: 35px;
+		padding-right: 35px;
+		//height: 300px;
+		margin-top: 100px;
+		div img {
+			width: 80%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	
+
+	.project-status {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		color: rgb(250, 250, 250);
+		margin-top: 15px;
+		div.inprogress {
+			animation-name: inProgressSpin;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		div.current-status {
+			font-size: 2em;
+			position: relative;
+			top: 6px;
+			display: inline-block;
+		}
+		p {
+			font-weight: 200;
+			letter-spacing: 2px;
+		}
+		button.incomplete {
+			background: $primary-color;
+			padding: 7px;
+			border-radius: $mainBorderRadius;
+			color: rgb(250, 250, 250);
+			font-weight: 200;
+			letter-spacing: 2px;
+			box-shadow: $mainBoxShadow;
+			transition: transform 0.25s ease-in-out;
+			-moz-transition: transform 0.25s ease-in-out;
+			-webkit-transition: transform 0.25s ease-in-out;
+			-o-transition: transform 0.25s ease-in-out;
+			text-decoration: none;
+			border: none;
+		}
+		button.complete {
+			background: $secondary-color;
+			padding: 7px;
+			border-radius: $mainBorderRadius;
+			color: rgb(250, 250, 250);
+			font-weight: 200;
+			letter-spacing: 2px;
+			box-shadow: $mainBoxShadow;
+			transition: transform 0.25s ease-in-out;
+			-moz-transition: transform 0.25s ease-in-out;
+			-webkit-transition: transform 0.25s ease-in-out;
+			-o-transition: transform 0.25s ease-in-out;
+			text-decoration: none;
+			border: none;
+		}
+		button:active, button:hover {
+			text-decoration: none;
+		}
+		button:hover {
+			transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			-webkit-transform: scale(1.1);
+			-o-transform: scale(1.1);
+		}
+		button:active {
+			transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			-webkit-transform: scale(0.9);
+			-o-transform: scale(0.9);
+		}
+	}
+
+	h2 {
+		font-size: 1.8em;
+		font-weight: 100;
+		letter-spacing: 2px;
+		margin-bottom: 25px;
+		text-align: center;
+		color: $main-font-color-white;
+		transition: font-size $transitionDurationMobile ease-in-out;
+		-moz-transition: font-size $transitionDurationMobile ease-in-out;
+		-webkit-transition: font-size $transitionDurationMobile ease-in-out;
+		-o-transition: font-size $transitionDurationMobile ease-in-out;
+	}
+
+	h5 {
+		text-align: center;
+		margin-top: 15px;
+		color: rgb(250, 250, 250);
+		font-weight: 200;
+		letter-spacing: 1px;
+	}
+
+	p.other-tools {
+		text-align: center;
+		margin-top: 15px;
+		color: rgb(250, 250, 250);
+		font-weight: 100;
+		letter-spacing: 1px;
+		font-size: 1.2em;
+
+	}
+
+	p {
+		color: rgb(230, 230, 230);
+		font-weight: 200;
+		letter-spacing: 1px;
+		font-size: 0.9em;
+	}
+
+	.tools-list {
+		img {
+			height: 50px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		h5 {
+			text-align: center;
+			margin-top: 15px;
+			color: rgb(250, 250, 250);
+			font-weight: 200;
+			letter-spacing: 1px;
+		}
+	}	
+}
+
+.slick-prev {
+	left: 0px !important;
+}
+
+.slick-next {
+	right: 0px !important;
+}
+
+#iWindow.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+//---------------------------------
+//	Medium Devices 480px --> 767px
+//---------------------------------
+@media (min-width: 480px) {
+	.header {
+		.title-wrapper {
+			h1 {
+				font-size: 4em;
+			}
+		}
+	}
+}
+
+//---------------------------------
+//	Large Devices 767px --> 1024px
+//---------------------------------
+@media (min-width: 767px) {
+	.header {
+		.title-wrapper {
+		//	margin-top: -30px;
+
+			h1 {
+				font-size: 5em;
+			}
+
+			img {
+				width: 80px;
+			}
+		}
+	}
+
+	.nav-wrapper {
+		.navigation {
+			font-size: 0.8em;
+			ul li a {
+				font-weight: 100;
+			}
+		}
+	}
+
+	.app-screen.about-wrapper {
+		.tools-wrapper {
+			img {
+				height: 120px !important;
+			}
+		}
+
+		.float-right {
+			float: right;
+			margin-right: 50px;
+		}
+
+		.float-left {
+			float: left;
+			margin-left: 50px;
+		}
+	}
+
+
+	.app-screen.contact-wrapper {
+		.row-1 {
+			.column-0 {
+				img {
+					width: 80% !important;
+					float: right;
+				}
+			}
+		}
+	}
+
+	#app {
+		.app-screen {
+			.content {
+				padding-top: 250px;
+				h2 {
+					font-size: 2em;
+				}
+				h3 {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+	.gap {
+		height: $gapSizeTablet;
+	}
+
+	.gap.hideable {
+		display: none;
+	}
+} 
+
+//---------------------------------
+//	X-Large Devices 1024px --> ∞
+//---------------------------------
+@media (min-width: 1024px) {
+	.header {
+		.title-wrapper {
+			//margin-top: -40px;
+
+			h1 {
+				font-size: 6.5em;
+			}
+
+			img {
+				width: 100px;
+			}
+		}
+	}
+
+	#app {
+		.app-screen {
+			.content {
+				h2 {
+					font-size: 2.5em;
+				}
+
+				h3 {
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+
+	.gap {
+		height: $gapSizeDesktop;
+	}
+}
+
+@keyframes colorMorpher {
+	0% {
+		filter: drop-shadow(0px 4px 6px rgba(255, 83, 73, 0.9));
+	}
+	50% {
+		filter: drop-shadow(0px 4px 6px rgba(83, 255, 73, 0.9));
+	}
+	100% {
+		filter: drop-shadow(0px 4px 6px rgba(255, 204, 54, 0.9));
+	}
+}
+
+@keyframes inProgressSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
